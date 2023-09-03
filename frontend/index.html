@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Sticky Notes</title>
+    <link rel="stylesheet" href="./src/style.css" type="text/css">
+    <link rel="shortcut icon" href="./src/favicon.ico">
+    <script src="./src/drag.js" type="module"></script>
+    <script src="./src/window.js" type="module"></script>
+    <script src="./src/appearance.js" type="module"></script>    
+    <script src="./src/saveNote.js" type="module"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div style="float:left">
+            <img src="./src/favicon.ico" width="40px" height="40px"></img>
+        </div>
+        <div id="header-title-container" class="header-item">
+            <h2>Sticky Notes</h2>
+        </div>
+        <div id="add-button" class="header-item">
+            <div id="plus-button">+</div>
+            <div class="drop-down">
+                <div onclick="addNote()">Notes</div>
+                <div onclick="addDictionary()">Dictionary</div>
+                <div onclick="addCalculator()">Calculator</div>
+                <div onclick="addTimer()">Timer/Clock</div>
+                <div onclick="addSnake()">Snake</div>
+            </div>
+        </div>
+        <div id="appearance-toggle" class="header-item">
+            <div id="darklight-button">◐</div>
+            <div class="drop-down">
+                <div id="automode-button" onclick="auto()">auto</div>
+                <div id="lightmode-button" onclick="lightmode()">light</div>
+                <div id="darkmode-button" onclick="darkmode()">dark</div>
+            </div>
+        </div>
+        <div id="clear-windows-btn" class="header-item" onclick="clearAllWindows()">×</div>
+    </div>
+
+
+
+    <div id="main-container">
+
+    </div>
+
+</body>
+
+</html>
