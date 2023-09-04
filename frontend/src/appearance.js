@@ -1,4 +1,4 @@
-//changes the theme of the website
+//changes the theme of window
 //changes the variables that need to be changed
 var appearance = 'auto';
 function darkmode() {

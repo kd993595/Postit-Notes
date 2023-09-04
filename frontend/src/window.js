@@ -57,6 +57,12 @@ var addTimer = () => {
 };
 window.addTimer = addTimer;
 
+/*
+//New functions for new note types go here
+
+
+*/
+
 //deletes window
 var closeWindow = (element) => {
     element.parentNode.remove();
@@ -244,13 +250,6 @@ window.clearAllWindows = clearAllWindows;
 
 
 // key bindings
-
-var updatePageRotation = true;
-
-function changeUpdatePageRotation(condition) {
-    updatePageRotation = condition;
-}
-
 window.addEventListener('keydown', function (event) {
     if (event.shiftKey && event.keyCode == 78) {
         // new note 
@@ -276,13 +275,6 @@ window.addEventListener('keydown', function (event) {
         addSnake();
     }
 
-    // if(event.ctrlKey && event.keyCode == 82){
-    //     event.preventDefault()
-    //     if(updatePageRotation){
-    //         changeUpdatePageRotation(false)
-    //         document.body.classList.add("transform")
-    //     }
-    // }
 });
 
 // notifications
