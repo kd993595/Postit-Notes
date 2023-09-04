@@ -1,3 +1,5 @@
+import {LoadData, SaveData} from '../wailsjs/go/main/App';
+
 var saveNotes = () => {
     notes = document.getElementsByClassName('note');
     saveNoteData = [];
@@ -9,7 +11,8 @@ var saveNotes = () => {
         saveNoteData.push(noteinfo);
         var notifcation = new Notification("Added a new note");
     }
-    saveNoteData = localStorage.setItem('saveNotes', JSON.stringify(saveNoteData));
+    //saveNoteData = localStorage.setItem('saveNotes', JSON.stringify(saveNoteData));
+    SaveData(JSON.stringify(saveNoteData));
 };
 
 function saveNote(header, content) {
@@ -22,7 +25,8 @@ window.addEventListener('beforeUnload', saveNotes);
 
 var loadNote = () => {
     let notes = document.getElementsByClassName('note');
-    let saveNoteData = JSON.parse(localStorage.getItem('saveNotes'));
+    //let saveNoteData = JSON.parse(localStorage.getItem('saveNotes'));
+    let saveNoteData = LoadData();
     for (let i = 0; i < notes.length; i++) {
         let note = notes[i];
         let iframe = note.getElementsByTagName('iframe');
